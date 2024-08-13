@@ -13,7 +13,7 @@ app.use('/add-product',(req, res, next) => {
     res.send('<form method = "POST" action="/products"><input type="text" name="product"><button type = "submit">add the products</button></form>')
 })
 
-app.use('/products',(req, res, next) => {
+app.post('/products',(req, res, next) => {
     console.log(req.body)
     console.log(req.body.product)
     
